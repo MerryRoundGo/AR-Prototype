@@ -45,13 +45,13 @@ class MainActivity : AppCompatActivity() {
             placeModel()
         }
 
-        videoNode = VideoNode(sceneView.engine, scaleToUnits = 0.7f, centerOrigin = Position(y=-4f), glbFileLocation = "models/plane.glb", player = mediaPlayer, onLoaded = {_,_ ->
-            mediaPlayer.start()
-        })
+//        videoNode = VideoNode(sceneView.engine, scaleToUnits = 0.7f, centerOrigin = Position(y=-4f), glbFileLocation = "models/plane.glb", player = mediaPlayer, onLoaded = {_,_ ->
+//            mediaPlayer.start()
+//        })
 
         modelNode = ArModelNode(sceneView.engine,PlacementMode.INSTANT).apply {
             loadModelGlbAsync(
-                glbFileLocation = "models/sofa.glb",
+                glbFileLocation = "models/Pyramid.glb",
                 scaleToUnits = 1f,
                 centerOrigin = Position(-0.5f)
 
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         sceneView.addChild(modelNode)
-        modelNode.addChild(videoNode)
+//        modelNode.addChild(videoNode)
 
     }
 
